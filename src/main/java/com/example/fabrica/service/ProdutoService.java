@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@Service//BeanUtils.copyProperties(DTO, NORMAL)
 public class ProdutoService {
     private final ProdutoRepository produtoRepository;
 

@@ -1,13 +1,12 @@
 package com.example.fabrica.service;
 
 import com.example.fabrica.model.Lote;
-import com.example.fabrica.model.Produto;
 import com.example.fabrica.repository.LoteRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
+//BeanUtils.copyProperties(DTO, NORMAL)
 @Service
 public class LoteService {
     private final LoteRepository loteRepository;
