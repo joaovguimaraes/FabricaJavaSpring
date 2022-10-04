@@ -5,6 +5,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -14,9 +16,8 @@ public class Lote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @JoinColumn(name = "produtoId")
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Produto produto;
+    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    private Set<Produto> produtos = new HashSet<>();
     private String name;
     private Date date;
 }

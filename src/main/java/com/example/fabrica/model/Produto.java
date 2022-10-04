@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@Table(name = "produto")
 public class Produto {
     // título, descrição, preço de produção, preço de venda, categoria, disponibilidade
     @Id
